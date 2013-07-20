@@ -1,0 +1,18 @@
+{
+  "name": "icedwiki",
+  "version": "0.0.1",
+  "description": "A simple wiki system built with IcedCoffeeScript and Mongoose.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/undoZen/icedwiki.git"
+  },
+  "keywords": [
+    "wiki",
+    "markdown"
+  ],
+  "author": "undoZen <opensource@undozen.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/undoZen/icedwiki/issues"
+  }
+}
