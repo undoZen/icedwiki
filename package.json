@@ -20,6 +20,7 @@
     "jade": "*",
     "iced-coffee-script": "~1.6.3-d",
     "mongoose": "~3.6.15",
-    "marked": "~0.2.9"
+    "marked": "~0.2.9",
+    "underscore": "~1.5.1"
   }
 }
