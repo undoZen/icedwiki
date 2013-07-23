@@ -17,11 +17,11 @@ exports.put = (obj, cb) ->
   obj.html = marked(obj.content)
   obj.links_to = []
   obj.html.replace reflink, (all, title, slug) ->
+    slug = '/' + slug if slug[0] is not '/'
     obj.links_to.push(slug) if slug
   obj.html.replace /<h1>([^\n]+)<\/h1>/i, (all, title) ->
     obj.title = title
   obj.title ||= slug
-  console.log(obj)
   (new Doc(obj)).save(cb)
 
 getTitles = exports.getTitles = (slugs, cb) ->
@@ -38,7 +38,7 @@ addInnerLink = exports.addInnerLink = (html, titles) ->
   html.replace reflink, (all, title, slug) ->
     return '' if not title and not slug
     return title if not slug
-    return '<a href="' + slug + '">'+(titles[slug]||slug)+'</a>' if not title
+    title = title or titles[slug] or slug.replace(/^\//,'')
     return '<a href="' + slug + '">' + title + '</a>'
 
 exports.get = (slug, cb) ->
