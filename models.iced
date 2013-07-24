@@ -2,8 +2,8 @@ mongoose = require('./mongoose')
 docSchema = mongoose.Schema
   slug: String
   title: String
-  auto_saved: Boolean
-  published: Boolean
+  auto_saved: { type: Boolean, default: false }
+  published: { type: Boolean, default: false }
   history: { type: Boolean, default: false }
   content: String
   html: String

@@ -18,4 +18,4 @@ app.use(app.router)
 if ('development' == app.get('env'))
   app.use(express.errorHandler())
 
-require('./routes/' + r + '.iced') for r in ['get', 'post']
+require('./routes/' + r + '.iced') for r in ['get', 'put']
