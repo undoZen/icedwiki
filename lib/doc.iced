@@ -1,5 +1,9 @@
 {Doc} = require('../models.iced')
 marked = require('marked')
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+})
 _ = require('underscore')
 {reflink} = require('../config.iced')
 
