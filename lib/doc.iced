@@ -40,7 +40,7 @@ addInnerLink = exports.addInnerLink = (html, titles) ->
 exports.get = (queryObj, cb) ->
   queryObj = {slug: queryObj} if typeof queryObj is 'string'
   queryObj = _.pick(queryObj, 'slug', 'published')
-  queryObj.history = false;
+  queryObj.history = false
   await Doc.findOne(queryObj, defer(err, doc))
   return cb(err) if err
   return cb(null, null) if not doc

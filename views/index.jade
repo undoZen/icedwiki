@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  != doc.html
-  div#edit(style='display: none')
+  article#article!= doc.html
+  #edit(style='display: none')
     form
       textarea(id="content", style="width: 90%; height: 400px; margin: auto")!= doc.content
       br

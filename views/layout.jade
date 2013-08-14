@@ -35,6 +35,7 @@ html
               setTimeout(function () {
                 document.body.classList.remove('processing');
               }, 300);
+              document.getElementById('article').innerHTML = res.body.html;
             }
           })
       }

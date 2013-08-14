@@ -13,6 +13,6 @@ app.put '/*', (req, res, next) ->
   return next(err) if err
   if req.accepts('json') or req.xhr
     res.setHeader('Content-Type', 'application/json; charset=utf-8')
-    res.end('{"success": true}')
+    res.end(JSON.stringify({success: true, html: doc.html}))
   else
     res.redirect(slug)
